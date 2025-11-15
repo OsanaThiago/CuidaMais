@@ -6,7 +6,7 @@
 }
 
 main{
-    background-color: #001BCC;
+    background-color:#001BCC;
     width: 60%;
     margin: auto;
     margin-top: 5rem;
@@ -29,14 +29,20 @@ header img{
 .login-info{
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    gap: 1rem;
 }
+
+.email,.senha{
+    display: flex;
+    flex-direction: column;
+}
+
 .login-options{
     display: flex;
 }
 
 input[type="email"],input[type="password"]{
-    padding: .3rem;
+    padding: .7rem;
     border-radius: 8px;
     border-style: none;
     width: 15rem;
