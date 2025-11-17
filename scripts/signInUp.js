@@ -18,7 +18,7 @@ function login(){
     btnLogar.addEventListener("click" , (e) =>{
         for(let i = 0; i<usuarios.length;i++){
             if(usuarios[i].email === emailInput.value && usuarios[i].senha === senhaInput.value){
-                window.location.href = "https://youtu.be/nc_rEBgw6E8?t=57"
+                window.location.href = "https://youtu.be/Km71Rr9K-Bw?t=141"
             }
             else{
                 alert("Email e/ou senha incorreto")
