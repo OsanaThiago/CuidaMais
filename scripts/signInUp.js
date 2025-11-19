@@ -6,32 +6,6 @@ switch(page){
     case 'cadastroPage': cadastro(); break;
 }
 
-function logwgoogle(response) {
-    const data = jwt_decode(response.credential)
-    console.log(data)
-}
-
-window.onload = function () {
-
-    google.accounts.id.initialize({
-        client_id: "yourclientid",
-        callback: logwgoogle
-    });
-
-    google.accounts.id.renderButton(
-        document.getElementById("logingoogle"),{
-            theme: "outline", 
-            size: "large",
-            type:"standard",
-            shape:"pill",
-            text:"continue_with",
-            logo_alignment:"left"             
-        } 
-    );
-
-google.accounts.id.prompt(); // also display the One Tap dialog
-}
-
 function login(){
     const btnLogar = document.querySelector("#btnLogar")
     const senhaInput = document.querySelector("#input-senha")
@@ -51,6 +25,31 @@ function login(){
             }
         }
     })
+
+    function logwgoogle(response) {
+        window.location.href = "https://www.youtube.com/watch?v=lPngofMbsNk"
+    }
+
+    window.onload = function () {
+
+    google.accounts.id.initialize({
+        client_id: "140621001944-0na9t6a88sm5g2qs85iinapvihg3ebhi.apps.googleusercontent.com",
+        callback: logwgoogle
+    });
+
+    google.accounts.id.renderButton(
+        document.getElementById("logingoogle"),{
+            theme: "outline", 
+            size: "large",
+            type:"standard",
+            shape:"pill",
+            text:"continue_with",
+            logo_alignment:"left"             
+        } 
+    );
+
+    google.accounts.id.prompt(); 
+    }
 }
 
 
