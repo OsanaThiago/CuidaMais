@@ -9,7 +9,9 @@
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
     crossorigin="anonymous" 
     referrerpolicy="no-referrer" />
-    <script src="../scripts/signInUp.js" defer></script>
+    <script type="module" src="../scripts/signInUp.js" defer></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.js"></script>
 </head>
 
 <body id="loginPage">
@@ -39,10 +41,8 @@
         <button id="btnLogar">Login</button>
 
         <div class="login-com">
-            <div class="google">
-                <button>Login com</button>
-                <img src="../img/google.png" alt="">
-            </div>
+            <button id="logingoogle"></button>
+
             <div class="facebook">
                 <button>Login com</button>
                 <img src="../img/facebook.png" alt="">

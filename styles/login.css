@@ -94,22 +94,13 @@ button{
 }
 
 .login-com{
-    display: flex;
-    position: relative;
-    gap: 1rem;
+    /* display: flex;
+    position: relative; */
 }
 
-.login-com button{
-    padding-right: .8rem;
+#logingoogle{
+    background-color: transparent;
 }
-
-.google img{
-    height: 1.2rem;
-    position: absolute;
-    right: 55%;
-    top: .55rem;
-}
-
 .facebook img{
     position: absolute;
     height: 1.3rem;
