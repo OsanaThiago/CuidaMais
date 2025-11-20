@@ -55,6 +55,7 @@ header img{
     bottom: 1rem;
     cursor: pointer;
 }
+
 .email label,.senha label{
     padding-left: .4rem;
 }
@@ -62,7 +63,7 @@ header img{
     display: flex;
 }
 
-input[type="email"],input[type="password"]{
+input[type="email"],input[type="password"],input[type="text"]{
     height: 3rem;
     border-radius: 8px;
     border-style: none;
