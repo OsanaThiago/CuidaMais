@@ -88,8 +88,12 @@ function cadastro(){
         usuarios.push(usuario)
 
         localStorage.setItem("usuarios", JSON.stringify(usuarios))
-
         window.location.href="login.html"
+
+        // btnRegister.addEventListener("click" ,(e) =>{
+        //     e.preventDefault()
+        // })
+
     })
 }
 

@@ -44,6 +44,11 @@ header img{
     gap: 2rem;
     width: 35%;
     padding-bottom: 2rem;
+    align-items: center;
+}
+
+#btnregister{
+    margin-top: 1.8rem;
 }
 
 .email,.senha,.nome,.nascimento{
