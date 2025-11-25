@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 13vh;
+    text-align: center;
+    display: grid; 
+    grid-template-columns: 1fr 2fr 1fr;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+}
+header div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-transform: uppercase;
+}
+header .logo-cuida img {
+    width: 80px;
+    height: auto;
+}
+header a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header a img {
+    width: 50px;
+    height: auto; 
+    gap: 30px;    
+}
+.hamburguer {
+    display:none;
+}
+
+
+header div a{
+    font-size: 15px;
+    font-weight: 100;
+    cursor: pointer;
+    font-family: 'Instrument Sans';
+    font-size: 16px;
+    font-weight: 500;
+    transition: 800ms;
+}
+header div a:hover {
+    color: #EDC274;
+    transition: 300ms;
+    transform: translateX(2px) scaleZ(1.8);
+}
+main{
+    height: 74vh;
+    margin: auto;
+}
+section {
+    margin-top: 100px;
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-family: 'Instrument Sans';
+}
+main section  h4{
+    font-size: 30px;
+    font-weight: 200;
+    cursor: default;
+}
+main section h1 {
+    font-size: 60px;
+    font-family: 'Joan';
+    font-weight: 700;
+    cursor: default;
+}
+main section h2 {
+    font-weight: 200;
+    font-size: 30px;
+    cursor:default ;
+}
+.container-triagem {
+    width: 800px;
+    display: flex;
+    min-width:  320px;
+    height: 150px;
+    margin-top: 200px;
+    box-sizing: content-box;
+    position: inherit;
+    background-color: #BCBCBC;
+    border-radius: 17px;
+    flex-wrap: wrap;
+}
+#triagem {
+    min-width:320px;
+    width: 100%;
+    height: 95px;
+    background-color: #BCBCBC;
+    color: #242424;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 30px;
+    font-size: 20px;
+    padding-bottom: 60px;
+}
+
+.anexo-icon, .voz-icon, .enviar-icon {
+    width: 100px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    background-color: #8d8d8d;
+    border-radius: 20px;
+    margin-left: 10px;
+    position: sticky;
+    bottom: 10px;
+    left: 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+input[type="button"]{
+    border: 0;
+    background-color: #ffffff00;
+    font-family: 'Instrument Sans';
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+}
+.enviar-icon {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 7px;
+    margin-left: 470px;
+}
+.anexo-icon img, .voz-icon img, .enviar-icon img{
+    width: 15px;
+    height: 15px;
+    position: relative;
+}
+footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.copyright-rodape {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin:auto
+}
+
+.copyright-rodape .linha-acima{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    text-transform: uppercase;
+    cursor: default;
+    font-size: 20px;
+    font-family: "Instrument Sans";
+    font-weight: 300px;
+    display: none;
+}
+
+.copyright-rodape .linha-abaixo {
+    font-weight: 200;
+    color: #626262;
+    display: flex;
+    justify-content: center;
+}

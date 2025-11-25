@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+header{
+    height: 13vh;
+    text-align: center;
+    display: grid; 
+    grid-template-columns: 150px 1200px 190px;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+}
+header div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-transform: uppercase;
+}
+header .logo-cuida img {
+    width: 80px;
+    height: auto;
+}
+header a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header a img {
+    width: 50px;
+    height: auto; 
+    gap: 30px;    
+}
+.hamburguer {
+    display:none;
+}
+
+
+header div a{
+    font-size: 15px;
+    font-weight: 100;
+    cursor: pointer;
+    font-family: 'Instrument Sans';
+    font-size: 16px;
+    font-weight: 500;
+    transition: 800ms;
+}
+header div a:hover {
+    color: #EDC274;
+    transition: 300ms;
+    transform: translateX(2px) scaleZ(1.8);
+}
+main{
+    width: 100%;
+    height: 100%;
+    top: 9vh;
+}
+main section div {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top:9vh;
+}
+
+section div h1{
+    width: 800px;
+    font-weight: 700;
+    font-size: 5vh;
+    margin:9vh;
+    font-family: 'Instrument Sans';
+    font-size: 5vh;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.terceira-div{
+    gap: 15vh;
+}
+
+.velhos-1 {
+    width: 80vh;
+}
+
+.segunda-div {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.videoconferencia {
+    width: 80vh;
+    border-radius: 10px;
+}
+.content-cuidaia h1:nth-child(1){
+    width: 90%;
+}
+.content-cuidaia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    width: 40%;
+}
+
+.content-cuidaia h1:nth-child(2) {
+    width: 100%;
+    font-size: 9vh
+}
+.cuida-ia {
+    width: 70vh;
+    height: 70vh;
+    border-radius: 12px;
+}
+.sub-container {
+    justify-content: space-evenly;
+    width: 100%;
+    height: 70vh;
+    margin-bottom: 20vh;
+}
+
+.sub-container div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 20%;
+    height: 40vh;
+    border:3px solid #000;
+    border-radius: 4px;
+    padding-top: 0;
+}
+.sub-container div.carac-items1 img{
+    width: 170px;
+}
+.sub-container div p{
+    width: 70%;
+}
+
+.sub-container .carac-items3 p{
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    position: static;
+}
+footer h1 {
+    width: 70% ;
+    font-family: 'Source Sans 3';
+    font-size: 48px;
+    text-align: center;
+    padding-top:30px ;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #edc374;
+    border-top: 0.1px solid #37373786 ;
+}
+.primeira-camada {
+    width: 100%;
+    max-width: 1440px;
+    justify-content: space-around;
+    /*gap: 19vh;*/
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 10vh 0;
+}
+.primeira-camada div{
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.primeira-camada div h3 {
+    cursor: default;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+footer div ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.apresentacao-cuida img {
+    width: 20vh;
+}
+
+a {
+    text-decoration: none;
+}
+a li {
+    font-family: 'Instrument Sans';
+    text-transform: none;
+    list-style: none;
+    color: #000;
+}
+
+a li:hover {
+    color: #EDC274;
+    transition: 300ms;
+}
+.copyright-rodape {
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    width:1440px;
+}
+
+.copyright-rodape .linha-acima{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    text-transform: uppercase;
+    cursor: default;
+    font-size: 20px;
+    font-family: "Instrument Sans";
+    font-weight: 300px;
+}
+
+.copyright-rodape .linha-abaixo {
+    margin-bottom: 10px;
+    font-weight: 200;
+    color: #626262;
+    display: flex;
+    justify-content: center;
+}
