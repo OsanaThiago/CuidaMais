@@ -19,7 +19,7 @@ function login(){
     btnLogar.addEventListener("click" , (e) =>{
         for(let i = 0; i<usuarios.length;i++){
             if(usuarios[i].email === emailInput.value && usuarios[i].senha === senhaInput.value){
-                window.location.href = "https://youtu.be/Km71Rr9K-Bw?t=141"
+                window.location.href = "index.html"
                 return
             }
         }
@@ -27,7 +27,7 @@ function login(){
     })
 
     function logWgoogle(response) {
-        window.location.href = "https://www.youtube.com/watch?v=lPngofMbsNk"
+        window.location.href = "index.html"
     }
 
     window.onload = function () {
@@ -89,10 +89,6 @@ function cadastro(){
 
         localStorage.setItem("usuarios", JSON.stringify(usuarios))
         window.location.href="login.html"
-
-        // btnRegister.addEventListener("click" ,(e) =>{
-        //     e.preventDefault()
-        // })
 
     })
 }
