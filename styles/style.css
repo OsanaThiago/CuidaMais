@@ -9,7 +9,7 @@ header{
     height: 13vh;
     text-align: center;
     display: grid; 
-    grid-template-columns: 150px 1200px 190px;
+    grid-template-columns: 1fr 2fr 1fr;
     align-content: center;
     justify-items: center;
     justify-content: center;
@@ -29,6 +29,7 @@ header a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-family: "Instrument Sans";
     gap:10px;
     color: black;
     text-transform: uppercase;
@@ -37,7 +38,13 @@ header a {
 header a img {
     width: 50px;
     height: auto; 
-    gap: 30px;    
+    gap: 30px;
+    transition: 300ms;
+}
+
+header a img.logo-cuida, header a:hover{
+    transition: 200ms ease-in-out;
+    transform: scale(1.2);
 }
 .hamburguer {
     display:none;
@@ -116,7 +123,6 @@ section div h1{
 }
 .cuida-ia {
     width: 70vh;
-    height: 70vh;
     border-radius: 12px;
 }
 .sub-container {
@@ -200,6 +206,7 @@ footer div ul{
 
 a {
     text-decoration: none;
+    color: #000;
 }
 a li {
     font-family: 'Instrument Sans';
@@ -237,4 +244,52 @@ a li:hover {
     color: #626262;
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width: 750px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+
+    header {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header div, header a.login{
+        display: none;
+    }
+    .logo-cuida {
+
+    }
+    .hamburguer{
+        display: flex;
+    }
+
+    main {
+        min-width: 320px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .primeira-div, .segunda-div, .terceira-div {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 70%;
+        margin: auto;
+    }
+
+    .primeira-div img, .segunda-div img,.terceira-div img{
+        width: 70%;
+        margin: auto;
+    }
+    .segunda-div{
+
+    }
+    .terceira-div {
+        padding-top: 0;
+    }
 }
