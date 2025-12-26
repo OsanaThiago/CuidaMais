@@ -1,23 +1,29 @@
-|* {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Instrument Sans', sans-serif;
 }
-
+body {
+    overflow-x: hidden;
+}
 header{
+    width: 85%;
+    min-width: unset;
     height: 13vh;
     text-align: center;
-    display: grid; 
-    grid-template-columns: 1fr 2fr 1fr;
+    display:flex;
+    flex-wrap: nowrap;
     align-content: center;
     justify-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin: auto;
 }
 header div{
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
-    gap: 20px;
+    gap: 60px;
     text-transform: uppercase;
 }
 header .logo-cuida img {
@@ -42,15 +48,17 @@ header a img {
     transition: 300ms;
 }
 
-header a img.logo-cuida, header a:hover{
+.login {
+    height: 8vh;
+    margin: auto 30px;
+}
+header a img.logo-cuida:hover, header a:hover{
     transition: 200ms ease-in-out;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .hamburguer {
     display:none;
 }
-
-
 header div a{
     font-size: 15px;
     font-weight: 100;
@@ -59,42 +67,57 @@ header div a{
     font-size: 16px;
     font-weight: 500;
     transition: 800ms;
+    
 }
 header div a:hover {
     color: #EDC274;
     transition: 300ms;
-    transform: translateX(2px) scaleZ(1.8);
+    transform: translateX(2px) scaleZ(1.1);
 }
 main{
     width: 100%;
     height: 100%;
     top: 9vh;
+    display: flex;
+    margin: auto;
+    background-color: #e9e9e9;
 }
+main section {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    width: 85%;
+    border-radius: 12px;
+}
+
 main section div {
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    padding-top:9vh;
+    padding: 5vh;
+    margin: auto;
 }
 
 section div h1{
-    width: 800px;
+    width: auto;
     font-weight: 700;
-    font-size: 5vh;
-    margin:9vh;
+    font-size: 3vw;
+    margin: 4vh;
     font-family: 'Instrument Sans';
-    font-size: 5vh;
     font-style: normal;
     font-weight: 300;
 }
 
 .terceira-div{
-    gap: 15vh;
+    gap: 5vh;
 }
 
 .velhos-1 {
-    width: 80vh;
+    width: 45%;
 }
 
 .segunda-div {
@@ -103,26 +126,23 @@ section div h1{
 }
 
 .videoconferencia {
-    width: 80vh;
+    width: 50%;
     border-radius: 10px;
-}
-.content-cuidaia h1:nth-child(1){
-    width: 90%;
 }
 .content-cuidaia {
     display: flex;
     flex-direction: column;
     justify-content: center;
     justify-items: center;
-    width: 40%;
+    width: 100%;
 }
 
 .content-cuidaia h1:nth-child(2) {
-    width: 100%;
-    font-size: 9vh
+    width: 90%;
+    font-size: 5.5vw;
 }
 .cuida-ia {
-    width: 70vh;
+    width: 40%;
     border-radius: 12px;
 }
 .sub-container {
@@ -137,8 +157,8 @@ section div h1{
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
-    width: 20%;
-    height: 40vh;
+    width: 30%;
+    height: 70%;
     border:3px solid #000;
     border-radius: 4px;
     padding-top: 0;
@@ -147,12 +167,9 @@ section div h1{
     width: 170px;
 }
 .sub-container div p{
-    width: 70%;
-}
-
-.sub-container .carac-items3 p{
     width: 100%;
 }
+
 
 footer {
     width: 100%;
@@ -161,6 +178,7 @@ footer {
     justify-items: center;
     align-items: center;
     position: static;
+    background-color: #e9e9e9;
 }
 footer h1 {
     width: 70% ;
@@ -171,7 +189,6 @@ footer h1 {
     font-weight: 400;
     text-transform: uppercase;
     color: #edc374;
-    border-top: 0.1px solid #37373786 ;
 }
 .primeira-camada {
     width: 100%;
@@ -246,50 +263,83 @@ a li:hover {
     justify-content: center;
 }
 
-@media screen and (max-width: 750px) {
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        
-    }
-
+@media screen and (max-width: 1050px) {
     header {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    header div, header a.login{
-        display: none;
+        min-width: unset;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 0 20px;
+        justify-content: space-between;
     }
     .logo-cuida {
+        order: 2;
+    }
+    .login p {
+        display: none;
+    }
+    .hamburguer {
+        order: 3;
+        display: block;
+        cursor: pointer;
+    }
+    .menu-side {
+        display: none;
 
     }
-    .hamburguer{
+    .responsivo {
         display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 13vh;
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        z-index: 10;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .primeira-div{
+        flex-direction: column;
+        font-size: 10vw;
+    }
+    .velhos-1 {
+        width: 80%;
+    }
+    .segunda-div {
+        flex-direction: column;
     }
 
-    main {
-        min-width: 320px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .primeira-div, .segunda-div, .terceira-div {
-        display: flex;
-        flex-direction: column-reverse;
-        width: 70%;
-        margin: auto;
-    }
-
-    .primeira-div img, .segunda-div img,.terceira-div img{
-        width: 70%;
-        margin: auto;
-    }
-    .segunda-div{
-
+    .videoconferencia {
+        width: 80%;
     }
     .terceira-div {
-        padding-top: 0;
+        flex-direction: column;
+        margin: 0;
+        
+    }
+    .content-cuidaia {
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    .content-cuidaia h1:nth-child(2) {
+        font-size: 10vw;
+    }
+    .cuida-ia {
+        width: 80%;
+    }
+    .sub-container {
+        flex-direction: column;
+        height: auto;
+        gap: 40px;
+    }
+
+    .sub-container div {
+        width: 80%;
+        height: 50vw;
+    }
+    footer .primeira-camada{
+        flex-direction: column;
+        row-gap: 80px;
+        flex-wrap: nowrap;
     }
 }

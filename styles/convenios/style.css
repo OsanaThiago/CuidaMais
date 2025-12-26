@@ -6,22 +6,22 @@
 }
 
 header{
+    width: 85%;
+    min-width: unset;
     height: 13vh;
-    margin: auto;
-    width: auto;
-    min-width: 600px;
     text-align: center;
-    display: grid; 
-    grid-template-columns: 1fr 2fr 1fr;
+    display:flex;
+    flex-wrap: nowrap;
     align-content: center;
     justify-items: center;
-    justify-content: center;
-    grid-area: header;
+    justify-content: space-evenly;
+    margin: auto;
 }
 header div{
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
-    gap: 20px;
+    gap: 60px;
     text-transform: uppercase;
 }
 header .logo-cuida img {
@@ -33,6 +33,7 @@ header a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-family: "Instrument Sans";
     gap:10px;
     color: black;
     text-transform: uppercase;
@@ -41,13 +42,21 @@ header a {
 header a img {
     width: 50px;
     height: auto; 
-    gap: 30px;    
+    gap: 30px;
+    transition: 300ms;
+}
+
+.login {
+    height: 8vh;
+    margin: auto 30px;
+}
+header a img.logo-cuida:hover, header a:hover{
+    transition: 200ms ease-in-out;
+    transform: scale(1.1);
 }
 .hamburguer {
     display:none;
 }
-
-
 header div a{
     font-size: 15px;
     font-weight: 100;
@@ -56,15 +65,15 @@ header div a{
     font-size: 16px;
     font-weight: 500;
     transition: 800ms;
+    
 }
 header div a:hover {
     color: #EDC274;
     transition: 300ms;
-    transform: translateX(2px) scaleZ(1.8);
+    transform: translateX(2px) scaleZ(1.1);
 }
-
-
 main{
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,16 +84,33 @@ main{
 }
 
 main img{
-    height: 15rem;
-    width: 25rem;
+    width: 10rem;
 }
-
+.sulamerica img {
+    width: 18rem;
+}
+.portos img {
+    width: 15rem;
+}
+img:nth-child(5) {
+    width: 15rem;
+}
 .conveniologo{
     display: flex;
     flex-wrap: wrap;
+    height: 39rem;
     align-items: center;
+    justify-content: space-evenly;
+    gap: 1.2rem;
 }
-
+.conveniologo div {
+    background-color: #eceaea;
+    border-radius: 12px;
+    width: 18rem;
+    height: 10rem;
+    align-items: center;
+    align-content: center;
+}
 h4{
     font-size: small;
 }
@@ -92,10 +118,56 @@ h1{
     font-size: xx-large;}
 footer {
     width: 100%;
-    height: 100%;
+    height:auto;
     display: flex;
     justify-items: center;
     align-items: end;
+    flex-direction: column;
+}
+.primeira-camada {
+    width: 100%;
+    justify-content: space-around;
+    /*gap: 19vh;*/
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 10vh 0;
+}
+.primeira-camada div{
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.primeira-camada div h3 {
+    cursor: default;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+footer div ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.apresentacao-cuida img {
+    width: 20vh;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+a li {
+    font-family: 'Instrument Sans';
+    text-transform: none;
+    list-style: none;
+    color: #000;
+}
+
+a li:hover {
+    color: #EDC274;
+    transition: 300ms;
 }
 .copyright-rodape {
     display: flex;
@@ -122,4 +194,51 @@ footer {
     color: #626262;
     display: flex;
     justify-content: center;
+}
+@media screen and (max-width: 1050px) {
+    header {
+        min-width: unset;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+    .logo-cuida {
+        order: 2;
+    }
+    .login p {
+        display: none;
+    }
+    .hamburguer {
+        order: 3;
+        display: flex;
+        cursor: pointer;
+    }
+    .menu-side {
+        display: none;
+
+    }
+    .responsivo {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 13vh;
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        z-index: 10;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .conveniologo {
+        justify-content: center;
+        margin-top: 7vh;
+        min-width: 720px;
+    }
+    footer .primeira-camada{
+        flex-direction: row-reverse;
+        row-gap: 100px;
+        flex-wrap: wrap;
+    }
 }

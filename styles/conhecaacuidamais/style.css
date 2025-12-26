@@ -4,24 +4,26 @@
     box-sizing: border-box;
     font-family: 'Instrument Sans', sans-serif;
 }
-
+body {
+    overflow-x: hidden;
+}
 header{
+    width: 85%;
+    min-width: unset;
     height: 13vh;
-    margin: auto;
-    width: auto;
-    min-width: 600px;
     text-align: center;
-    display: grid; 
-    grid-template-columns: 1fr 2fr 1fr;
+    display:flex;
+    flex-wrap: nowrap;
     align-content: center;
     justify-items: center;
-    justify-content: center;
-    grid-area: header;
+    justify-content: space-evenly;
+    margin: auto;
 }
 header div{
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
-    gap: 20px;
+    gap: 60px;
     text-transform: uppercase;
 }
 header .logo-cuida img {
@@ -33,6 +35,7 @@ header a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-family: "Instrument Sans";
     gap:10px;
     color: black;
     text-transform: uppercase;
@@ -41,13 +44,21 @@ header a {
 header a img {
     width: 50px;
     height: auto; 
-    gap: 30px;    
+    gap: 30px;
+    transition: 300ms;
+}
+
+.login {
+    height: 8vh;
+    margin: auto 30px;
+}
+header a img.logo-cuida:hover, header a:hover{
+    transition: 200ms ease-in-out;
+    transform: scale(1.1);
 }
 .hamburguer {
     display:none;
 }
-
-
 header div a{
     font-size: 15px;
     font-weight: 100;
@@ -56,22 +67,24 @@ header div a{
     font-size: 16px;
     font-weight: 500;
     transition: 800ms;
+    
 }
 header div a:hover {
     color: #EDC274;
     transition: 300ms;
-    transform: translateX(2px) scaleZ(1.8);
+    transform: translateX(2px) scaleZ(1.1);
 }
 main {
     display: flex;
-    height: 80dvh;
-    margin: 0 0 45px 0;
-    
+    flex-direction: column;
+    height: auto;
+    background-color: #FFF;
 }
 .text1{
-    min-width: 800px;
-    width: 1231px;
+    min-width: 320px;
+    width: 100%;
     height: auto;
+    margin: auto;
     min-height: 300px;
     padding: 100px;
     flex-shrink: 0;
@@ -79,34 +92,55 @@ main {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    align-items: center;
     gap: 150px;
     background-color: #D9D9D9;
 }
-.text1 h2{
+main h2{
     color: #001BCC;
-    font-size: 96px;
+    font-size: 2dvw;
     font-style: normal;
     font-weight: 400;
 }
+main h4{
+    color: #001BCC;
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 400;
+    
+}
+.titulo-container {
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 10dvh;
+    padding-top: 10vh;
+}   
 .text1 p{
+    display: flex;
+    flex-direction: column;
     font-size: 25px;
     color: #001BCC;
+    text-align: justify;
 }
 .text2 {
     background-color: #001BCC;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    padding: 40px;
-    gap: 200px;
+    padding: 20px;
+    gap: 10vh;
     height: auto;
     
 }
 .text2 h2{
+    padding-left: 80px;
+    padding-top: 30px;
     width: auto;
     flex-shrink: 0;
     color: #FFF;
-    text-align: center;
+    text-align: start;
     font-family: Inter;
     font-size: 25px;
     font-style: normal;
@@ -116,10 +150,15 @@ main {
 }
 .text2 ul {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     gap:20px;
+    justify-content: center;
+    margin: 80px auto;
 }
 .text2 li{
+    border:1px solid #626262;
+    border-radius: 12px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -127,6 +166,7 @@ main {
     gap: 30px;
     color: #D9D9D9;
     text-transform: uppercase;
+    width: 35vh;
 }
 
 .text2 img{
@@ -136,16 +176,73 @@ main {
 
 footer {
     width: 100%;
-    height: 100%;
     display: flex;
+    flex-direction: column;
     justify-items: center;
-    align-items: end;
+    align-items: center;
+    position: static;
+}
+footer h1 {
+    width: 70% ;
+    font-family: 'Source Sans 3';
+    font-size: 48px;
+    text-align: center;
+    padding-top:30px ;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #edc374;
+}
+.primeira-camada {
+    width: 100%;
+    max-width: 1440px;
+    justify-content: space-around;
+    /*gap: 19vh;*/
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 10vh 0;
+}
+.primeira-camada div{
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.primeira-camada div h3 {
+    cursor: default;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+footer div ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.apresentacao-cuida img {
+    width: 20vh;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+a li {
+    font-family: 'Instrument Sans';
+    text-transform: none;
+    list-style: none;
+    color: #000;
+}
+
+a li:hover {
+    color: #EDC274;
+    transition: 300ms;
 }
 .copyright-rodape {
     display: flex;
     flex-direction: column;
-    gap:10px;
-    margin:auto
+    gap:30px;
+    width:1440px;
 }
 
 .copyright-rodape .linha-acima{
@@ -158,12 +255,63 @@ footer {
     font-size: 20px;
     font-family: "Instrument Sans";
     font-weight: 300px;
-    display: none;
 }
 
 .copyright-rodape .linha-abaixo {
+    margin-bottom: 10px;
     font-weight: 200;
     color: #626262;
     display: flex;
     justify-content: center;
+}
+@media screen and (max-width: 1050px) {
+    header {
+        min-width: unset;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+    .logo-cuida {
+        order: 2;
+    }
+    .login p {
+        display: none;
+    }
+    .hamburguer {
+        order: 3;
+        display: block;
+        cursor: pointer;
+    }
+    .menu-side {
+        display: none;
+
+    }
+    .responsivo {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 13vh;
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        z-index: 10;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .titulo-container h2, .titulo-container h4 {
+        font-size: 5.5vw;
+    }
+    .text1 p {
+        font-size: 30px;
+    }
+    footer .primeira-camada {
+        flex-direction: row-reverse;
+        row-gap: 80px;
+        flex-wrap: wrap;
+        font-size: 2.5vw;
+    }
+}
+@media screen and (max-width:400px) {
+    
 }

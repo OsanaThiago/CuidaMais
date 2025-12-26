@@ -23,7 +23,7 @@ function login(){
                 return
             }
         }
-        alert("email ou senha incorretos")
+        x
     })
 
     function logWgoogle(response) {

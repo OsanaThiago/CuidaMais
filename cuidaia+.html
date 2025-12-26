@@ -3,46 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../img/assets/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/assets/favicon_io/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/convenios/style.css">
+    <link rel="stylesheet" href="/styles/cuidaIA+/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>  
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <title>CUIDA MAIS</title>
+    <title>Hospital Cuida +</title>
 </head>
 <body>
     <header>
-        <a class="logo-cuida" href="index.html"><img src="../img/assets/95134a85c4b5e5e991b8122634705653796ecd71.png" alt="logo-cuidamais"></a>
-        <div>
+        <a class="logo-cuida" href="index.html"><img src="../img/assets/95134a85c4b5e5e991b8122634705653796ecd71.png" alt="logo-cuidamais" class="logo-cuida"></a>
+        <div class="menu-side">
             <a href="sobrenos.html">Conheça a CUIDA+</a>
             <a href="cuidaia+.html">Consulta por I.A.</a>
             <a href="convenios.html">Convênios Médicos</a>
             <a href="especialidades.html">Nossa Especialidade</a>
             <a href="contato.html">Fale Conosco</a>
         </div>
-        <a href="login.html"><img src="../img/assets/login-de-usuario preto.png" alt="logo-paciente">Entrar</a>
+        <a href="login.html"class="login"><img src="../img/assets/login-de-usuario preto.png" alt="logo-paciente" class="entrar"><p>Entrar</p></a>
         <img src="../img/assets/menu-hambuguer-ff.png" alt="hamburguer" class="hamburguer">
     </header>
     <main>
-        <h1>CONVÊNIOS QUE ATENDEMOS</h1>
-        <h4>Confira se o seu convênio está credenciado conosco. <br>
-            Observação: por motivos comercias, essa lista está sujeito a mudanças sem aviso prévio. 
-            Para confirmar se seu convênio ainda está sendo atendido, entre em contato conosco</h4>
-            <div class="conveniologo">
-                <img src="/img/bradesco.png" alt="">
-                <img src="/img/planserv.png" alt="">
-                <img src="/img/sula.png" alt="">
-                <img src="/img/portos.png" alt="">
-                <img src="/img/unimed.png" alt="">
-                <img src="/img/asfff.png" alt="">
+        <section class="triagem-ia">
+            <div class="text">
+                <h4>Bem vindo ao</h4>
+                <h1>CuidaIA+</h1>
+                <h2>Uma Triagem médica por inteligencia artificial feita pela Cuida+.</h2>
             </div>
+            <div class="container-triagem">
+                <input type="text" name="triagem" id="triagem" placeholder="Comece agora sua triagem">
+                <div class="anexo-icon"><img src="/img/assets/anexo-icon.png" alt="anexo-icon">Anexo</div>
+                <div class="voz-icon"><img src="/img/assets/mic-icon.png" alt="">Audio</div>
+                <div class="enviar-icon"> <img src="/img/assets/enviar-icon.png" alt="enviar-icon"><input type="button" value="Enviar"></div>
+            </div>
+        </section>
     </main>
     <footer>
         <section class="copyright-rodape">
@@ -55,6 +53,6 @@
             </div>
         </section>
     </footer>
-    <script src="script.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>

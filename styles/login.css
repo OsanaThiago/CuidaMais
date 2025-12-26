@@ -4,7 +4,6 @@
     box-sizing: border-box;
     padding: 0;
     margin:0;
-    color: #FFFFFF;
     font-family: "Inter";
     font-weight: 300;
 }
@@ -22,10 +21,12 @@ main{
 
 header{
     text-align: center;
+    
 }
 
 h4{
     font-size: large;
+    color: #FFFFFF;
 }
 
 header img{
@@ -37,6 +38,7 @@ header img{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    color: #FFFFFF;
 }
 
 .email,.senha{
@@ -68,6 +70,7 @@ input[type="email"],input[type="password"],input[type="text"]{
     border-radius: 8px;
     border-style: none;
     color: black;
+    padding-left: 1rem;
 }
 
 input[type="checkbox"]{
@@ -81,7 +84,9 @@ a{
 #esqueceu-senha{
     margin-left: 1rem;
 }
-
+input[type="checkbox"]{
+    accent-color: #f9f9f9;
+}
 button{
     width: 10rem;
     height: 2.4rem;
@@ -114,13 +119,18 @@ button{
 
 .facebook{
     position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+
 }
 .facebook button{
     position: relative;
-    border-radius: .8rem;
-    width: 199px;
+    border-radius: 1rem;
+    width: 210px;
     font-size: .8rem;
-    text-align: right;
+    text-align: center;
 }
 
 .facebook img{

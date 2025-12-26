@@ -73,6 +73,7 @@ header img{
 
 input[type="email"],input[type="password"],input[type="date"],input[type="text"]{
     height: 3rem;
+    padding-left: .8rem;
     border-radius: 8px;
     border-style: none;
     color: black;
