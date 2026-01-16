@@ -61,6 +61,7 @@ function cadastro(){
     const emailInput = document.querySelector("#input-email")
     const nascimentoInput = document.querySelector("#input-nascimento")
 
+
     formCadastro.addEventListener("submit", (e)=>{
         e.preventDefault()
 
@@ -87,6 +88,27 @@ function cadastro(){
 
         usuarios.push(usuario)
 
+        fetch("http://localhost:5501/usuarios", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(usuario)
+        })
+        .then(response => {
+            if (!response.ok) {
+            throw new Error("Erro ao cadastrar");
+        }
+        return response.json();
+            })
+        .then(data => {
+            alert("Cadastro realizado com sucesso!");
+            console.log(data);
+        })
+        .catch(error => {
+            alert("Erro no cadastro");
+            console.error(error);
+        });
         localStorage.setItem("usuarios", JSON.stringify(usuarios))
         window.location.href="login.html"
 
