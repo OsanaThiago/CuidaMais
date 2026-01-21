@@ -122,7 +122,6 @@ button{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 20px;
 
 }
 .facebook button{
@@ -131,13 +130,14 @@ button{
     width: 210px;
     font-size: .8rem;
     text-align: center;
+    padding-left: 2rem;
 }
 
 .facebook img{
     position: absolute;
     height: 1.4rem;
     top: .55rem;
-    left: 5.5%;
+    left: 5%;
 }
 
 .criar-conta{
