@@ -4,8 +4,22 @@
     box-sizing: border-box;
     font-family: 'Instrument Sans', sans-serif;
 }
+
+:root {
+    --primary-color: #001BCC;
+    --secondary-color: #EDC274;
+    --background-color: #e9e9e9;
+    --text-color: #333;
+    --white: #fff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
 body {
     overflow-x: hidden;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 header{
     width: 85%;
@@ -18,6 +32,12 @@ header{
     justify-items: center;
     justify-content: space-evenly;
     margin: auto;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 0 0 12px 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 header div{
     display: flex;
@@ -29,6 +49,7 @@ header div{
 header .logo-cuida img {
     width: 80px;
     height: auto;
+    transition: var(--transition);
 }
 header a {
     display: flex;
@@ -37,15 +58,16 @@ header a {
     align-items: center;
     font-family: "Instrument Sans";
     gap:10px;
-    color: black;
+    color: var(--text-color);
     text-transform: uppercase;
     text-decoration: none;
+    transition: var(--transition);
 }
 header a img {
     width: 50px;
     height: auto; 
     gap: 30px;
-    transition: 300ms;
+    transition: var(--transition);
 }
 
 .login {
@@ -54,43 +76,44 @@ header a img {
 }
 header a img.logo-cuida:hover, header a:hover{
     transition: 200ms ease-in-out;
-    transform: scale(1.1);
+    transform: scale(1.05);
+    color: var(--secondary-color);
 }
 .hamburguer {
     display:none;
 }
 header div a{
-    font-size: 15px;
-    font-weight: 100;
-    cursor: pointer;
-    font-family: 'Instrument Sans';
     font-size: 16px;
     font-weight: 500;
-    transition: 800ms;
+    cursor: pointer;
+    transition: var(--transition);
     
 }
 header div a:hover {
-    color: #EDC274;
-    transition: 300ms;
-    transform: translateX(2px) scaleZ(1.1);
+    color: var(--secondary-color);
+    transform: translateX(2px);
 }
 main{
     width: 100%;
-    height: 100%;
-    top: 9vh;
+    min-height: 100vh;
+    padding-top: 5vh;
     display: flex;
-    margin: auto;
-    background-color: #e9e9e9;
+    flex-direction: column;
+    background-color: var(--background-color);
+    gap: 2rem;
 }
 main section {
-    background-color: #fff;
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 40px auto;
-    width: 85%;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1620px;
     border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 2rem;
 }
 
 main section div {
@@ -98,18 +121,18 @@ main section div {
     text-align: center;
     align-items: center;
     justify-content: center;
-    padding: 5vh;
+    padding: 2rem;
     margin: auto;
+    width: 100%;
 }
 
 section div h1{
     width: auto;
     font-weight: 700;
-    font-size: 3vw;
-    margin: 4vh;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    margin: 2rem;
     font-family: 'Instrument Sans';
-    font-style: normal;
-    font-weight: 300;
+    color: var(--text-color);
 }
 
 .terceira-div{
@@ -177,29 +200,29 @@ footer {
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    position: static;
-    background-color: #e9e9e9;
+    background-color: var(--background-color);
+    padding: 2rem 0;
 }
 footer h1 {
     width: 70% ;
     font-family: 'Source Sans 3';
-    font-size: 48px;
+    font-size: clamp(2rem, 4vw, 3rem);
     text-align: center;
-    padding-top:30px ;
+    padding-top: 2rem;
     font-weight: 400;
     text-transform: uppercase;
-    color: #edc374;
+    color: var(--secondary-color);
 }
 .primeira-camada {
     width: 100%;
     max-width: 1440px;
     justify-content: space-around;
-    /*gap: 19vh;*/
     align-items: center;
     align-content: center;
     display: flex;
     flex-direction: row-reverse;
-    margin: 10vh 0;
+    margin: 5vh 0;
+    gap: 2rem;
 }
 .primeira-camada div{
     padding-top: 0;
@@ -210,7 +233,8 @@ footer h1 {
 .primeira-camada div h3 {
     cursor: default;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
 }
 footer div ul{
     display: flex;
@@ -219,28 +243,31 @@ footer div ul{
 }
 .apresentacao-cuida img {
     width: 20vh;
+    transition: var(--transition);
 }
 
 a {
     text-decoration: none;
-    color: #000;
+    color: var(--text-color);
+    transition: var(--transition);
 }
 a li {
     font-family: 'Instrument Sans';
     text-transform: none;
     list-style: none;
-    color: #000;
+    color: var(--text-color);
 }
 
 a li:hover {
-    color: #EDC274;
-    transition: 300ms;
+    color: var(--secondary-color);
+    transform: translateX(5px);
 }
 .copyright-rodape {
     display: flex;
     flex-direction: column;
-    gap:30px;
-    width:1440px;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1440px;
 }
 
 .copyright-rodape .linha-acima{
@@ -250,9 +277,9 @@ a li:hover {
     justify-content: center;
     text-transform: uppercase;
     cursor: default;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-family: "Instrument Sans";
-    font-weight: 300px;
+    font-weight: 300;
 }
 
 .copyright-rodape .linha-abaixo {
@@ -270,6 +297,11 @@ a li:hover {
         width: 100%;
         padding: 0 20px;
         justify-content: space-between;
+        height: auto;
+        padding: 1rem;
+    }
+    header div {
+        gap: 30px;
     }
     .logo-cuida {
         order: 2;
@@ -284,7 +316,6 @@ a li:hover {
     }
     .menu-side {
         display: none;
-
     }
     .responsivo {
         display: flex;
@@ -293,10 +324,15 @@ a li:hover {
         top: 13vh;
         width: 100%;
         height: auto;
-        background-color: #fff;
+        background-color: var(--white);
         z-index: 10;
         text-align: center;
         padding: 20px 0;
+        box-shadow: var(--shadow);
+    }
+    main section {
+        width: 95%;
+        padding: 1rem;
     }
     .primeira-div{
         flex-direction: column;
@@ -308,14 +344,12 @@ a li:hover {
     .segunda-div {
         flex-direction: column;
     }
-
     .videoconferencia {
         width: 80%;
     }
     .terceira-div {
         flex-direction: column;
         margin: 0;
-        
     }
     .content-cuidaia {
         padding: 0;
@@ -332,7 +366,6 @@ a li:hover {
         height: auto;
         gap: 40px;
     }
-
     .sub-container div {
         width: 80%;
     }
@@ -340,5 +373,44 @@ a li:hover {
         flex-direction: column;
         row-gap: 80px;
         flex-wrap: nowrap;
+        gap: 2rem;
+    }
+    footer h1 {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header div {
+        gap: 20px;
+    }
+    main section div {
+        padding: 1rem;
+    }
+    .copyright-rodape .linha-acima {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+    }
+    header .logo-cuida img {
+        width: 60px;
+    }
+    header a img {
+        width: 40px;
+    }
+    main section {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    footer h1 {
+        font-size: 1.5rem;
+    }
+    .primeira-camada {
+        margin: 2vh 0;
     }
 }

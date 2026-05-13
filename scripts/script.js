@@ -1,12 +1,5 @@
-import { GoogleGenerativeAI } from "https://esm.sh/@google/generative-ai";
-
-const API_KEY = "AIzaSyA82XuBzQk517_JPnfwghZEvVHZsIsK6H8";
-const ia = new GoogleGenerativeAI(API_KEY);
-
-
 // Script para menu hamburguer
 const myMenu = document.querySelector('.hamburguer');
-
 
 myMenu.addEventListener('click', ()=>{
     const sideMenu = document.querySelector('.menu-side');
@@ -18,24 +11,8 @@ myMenu.addEventListener('click', ()=>{
 });
 
 // Script para triagem CuidaIA+
-
-
 async function CuidaIA(mensagem) {
-    try {
-        const model = ia.getGenerativeModel({ model: "gemini-1.5-flash" });
-        
-        const prompt = `Você é um assistente de saúde chamado CuidaIA+. 
-        Responda de forma clara e empática sobre questões de saúde e bem-estar.
-        Pergunta do usuário: ${mensagem}`;
-        
-        const result = await model.generateContent(prompt);
-        const resposta = result.response.text();
-        
-        return resposta;
-    } catch (error) {
-        console.error("Erro ao chamar API do Google:", error);
-        return "Desculpe, houve um erro ao processar sua solicitação.";
-    }
+    return "Ia ainda em deselvolvimento, aguarde por favor...";
 }
 
 const enviarBtn = document.querySelector('.enviar-icon');
