@@ -1,4 +1,5 @@
 let page = document.body.id
+const apiUrl = "http://localhost:8081"
 
 const showsenha = document.querySelectorAll("i.fa-regular.fa-eye-slash") 
 
@@ -45,10 +46,9 @@ function login(){
             
             // Extrai o email do payload do Google
             const email = dadosGoogle.email;
-            const nome = dadosGoogle.nome;
 
             // Faz uma requisição GET para buscar pacientes com este email no servidor
-            const response = await fetch(`http://localhost:8080/pacientes?email=${encodeURIComponent(email)}&nome=${encodeURIComponent(nome)}`);
+            const response = await fetch(`${apiUrl}/pacientes?email=${encodeURIComponent(email)}`);
             if (!response.ok) {
                 throw new Error("Erro ao buscar usuário");
             }
@@ -59,13 +59,12 @@ function login(){
                 return data[0];
             }
 
-
-            const createResponse = await fetch("http://localhost:8080/pacientes", {
+            const createResponse = await fetch(`${apiUrl}/pacientes`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(usuario)
+                body: JSON.stringify(dadosGoogle)
             });
 
             if (!createResponse.ok) {
@@ -113,9 +112,9 @@ function login(){
         try {
             // Tentamos executar este bloco de código. Se algo der errado, vamos para o 'catch'.
             
-            // Fazemos uma requisição HTTP para o servidor local na porta 8080, buscando pacientes com o email e senha fornecidos.
-            // encodeURIComponent garante que caracteres especiais no email e senha sejam codificados corretamente para a URL.
-            const resposta = await fetch(`http://localhost:8080/pacientes?email=${encodeURIComponent(email)}&senha=${encodeURIComponent(senha)}`)
+            // Busca o paciente no backend local pela porta configurada.
+            // encodeURIComponent garante que caracteres especiais no email sejam codificados corretamente para a URL.
+            const resposta = await fetch(`${apiUrl}/pacientes?email=${encodeURIComponent(email)}`)
             
     
             if (!resposta.ok) {
@@ -124,21 +123,16 @@ function login(){
             
             // Convertemos a resposta em formato JSON para um objeto JavaScript que podemos usar.
             const data = await resposta.json()
-            console.log(data)
-    
-            for (let usuario of data) {
-                if (usuario.email === email && usuario.senha === senha) {
-                    return usuario
-                } else if (usuario.email === email && usuario.senha !== senha) {
-                    alert("Senha incorreta")
-                    return null
-                } else {
-                    alert("Email não cadastrado")
-                    return null
-                }
+            const usuario = data[0]
+            if (!usuario) {
+                alert("Email não cadastrado")
+                return null
             }
-            // Retornamos os dados do usuário encontrado.
-    //        return data;
+            if (usuario.senha !== senha) {
+                alert("Senha incorreta")
+                return null
+            }
+            return usuario
         } catch (error) {
             // Se qualquer erro ocorreu no bloco 'try', executamos este bloco.
             // Imprimimos o erro no console do navegador para depuração.
@@ -195,12 +189,11 @@ function cadastro(){
         let usuario = {
             nome: nameInput.value,
             email: emailInput.value,
-            nascimento: nascimentoInput.value,
+            dataNascimento: nascimentoInput.value,
             senha: senhaInput.value
         }
 
-        B
-        const resposta = await fetch("http://localhost:8080/pacientes",{
+        const resposta = await fetch(`${apiUrl}/pacientes`,{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -251,5 +244,3 @@ showsenha.forEach(senhas=>{
         senhas.classList.toggle("fa-eye-slash")
     })
 })
-
-
